@@ -1,0 +1,28 @@
+[user]
+	name = Victor Ajayi
+	email = 81755664+victor-ajayi@users.noreply.github.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	editor = code
+	excludesfile = /Users/victorajayi/.gitignore
+[alias]
+	# Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch --all
+	remotes = remote --verbose
+
+	# Show the user email for the current repository
+	whoami = config user.email
+
+	# List aliases.
+	aliases = config --get-regexp alias
+
+	# View abbreviated SHA, description, and history graph
+	l = log --pretty=oneline --graph --abbrev-commit
+
+	# View the current working tree status using the short format
+	s = status -s
