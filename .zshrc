@@ -1,10 +1,7 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
-export DOTFILES="$HOME/Developer/dotfiles"
-
-# p10k prompt
-source $DOTFILES/zsh/.p10k.zsh
+export DOTFILES="$HOME/.dotfiles"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH 
@@ -13,6 +10,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME='vercel'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
