@@ -7,7 +7,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 [core]
-	editor = code
+	editor = code -w
 	excludesfile = /Users/victorajayi/.gitignore
 [alias]
 	# Show verbose output about tags, branches or remotes

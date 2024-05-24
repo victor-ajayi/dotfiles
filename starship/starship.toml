@@ -1,0 +1,47 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$status\
+$python\
+$cmd_duration $time\
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+[character]
+error_symbol = "[✗](bold red)"
+
+[directory]
+read_only = " "
+truncation_length = 4
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bold blue"
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[time]
+disabled = false
+style = "bold white"
+format = "[$time]($style) "
+time_format = "%H:%M"
+
+[status]
+format = "[$symbol$status]($style) "
+
+[python]
+symbol = " "
+format = "[$symbol$version]($style) "
+detect_folders = []
+detect_files = []
+detect_extensions = []
