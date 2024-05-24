@@ -3,9 +3,9 @@ $directory\
 $git_branch\
 $git_status\
 $fill\
-$status\
+$cmd_duration\
 $python\
-$cmd_duration $time\
+$time\
 $line_break\
 $character"""
 
@@ -27,17 +27,15 @@ format = "[$symbol$branch]($style) "
 style = "bold blue"
 
 [cmd_duration]
-format = "[$duration]($style)"
-style = "yellow"
+min_time = 1
+format = "[$duration]($style) "
+style = "#D0EBE0"
 
 [time]
 disabled = false
-style = "bold white"
+style = "#B9DBF8"
 format = "[$time]($style) "
 time_format = "%H:%M"
-
-[status]
-format = "[$symbol$status]($style) "
 
 [python]
 symbol = " "
@@ -45,3 +43,4 @@ format = "[$symbol$version]($style) "
 detect_folders = []
 detect_files = []
 detect_extensions = []
+style = "#94E69C"
