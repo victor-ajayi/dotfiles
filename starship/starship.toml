@@ -5,7 +5,6 @@ $git_status\
 $fill\
 $cmd_duration\
 $python\
-$time\
 $line_break\
 $character"""
 
@@ -26,8 +25,17 @@ symbol = " "
 format = "[$symbol$branch]($style) "
 style = "bold blue"
 
+[git_status]
+# format = '[\[$staged$modified$untracked$up_to_date\]]($style)'
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold green"
+untracked = "?$style"
+modified = "[!](bold yellow)"
+staged = "+$style"
+deleted = ""
+up_to_date = "✓"
+
 [cmd_duration]
-min_time = 1
 format = "[$duration]($style) "
 style = "#D0EBE0"
 
@@ -39,7 +47,8 @@ time_format = "%H:%M"
 
 [python]
 symbol = " "
-format = "[$symbol$version]($style) "
+format = "[$symbol$version $virtualenv]($style) "
+version_format = "$raw"
 detect_folders = []
 detect_files = []
 detect_extensions = []
