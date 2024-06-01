@@ -33,7 +33,6 @@ untracked = "?$style"
 modified = "[!](bold yellow)"
 staged = "+$style"
 deleted = ""
-up_to_date = "✓"
 
 [cmd_duration]
 format = "[$duration]($style) "
