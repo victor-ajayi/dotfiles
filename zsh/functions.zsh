@@ -1,5 +1,8 @@
 # Bash functions
 
+# cd into a dir and list contents
+cs() { cd $1 && l; }
+
 # cd into project dir with fzf
 op() {
   cda "$(find ~/Developer -type d -maxdepth 1 | fzf -e --reverse)"

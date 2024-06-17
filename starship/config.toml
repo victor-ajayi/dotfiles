@@ -26,7 +26,6 @@ format = "[$symbol$branch]($style) "
 style = "bold blue"
 
 [git_status]
-# format = '[\[$staged$modified$untracked$up_to_date\]]($style)'
 format = '([\[$all_status$ahead_behind\]]($style) )'
 style = "bold green"
 untracked = "?$style"
