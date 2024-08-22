@@ -27,3 +27,6 @@
 	# View the current working tree status using the short format
 	s = status -s
 	undo = reset --soft HEAD^
+[push]
+	# Automatically set origin as the remote for current branch
+	autoSetupRemote = true
