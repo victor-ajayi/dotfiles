@@ -4,7 +4,7 @@ source $DOTFILES/zsh/setopt.zsh
 source $DOTFILES/zsh/exports.zsh
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/functions.zsh
-
+source $DOTFILES/zsh/plugins.zsh
 
 # ------------- ZSH -------------
 export ZSH="$HOME/.oh-my-zsh"
