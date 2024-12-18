@@ -4,7 +4,6 @@ source $DOTFILES/zsh/setopt.zsh
 source $DOTFILES/zsh/exports.zsh
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/functions.zsh
-source $DOTFILES/zsh/plugins.zsh
 
 # ------------- ZSH -------------
 export ZSH="$HOME/.oh-my-zsh"
@@ -27,3 +26,6 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh.toml)"
 
 # ------------- FZF -------------
 eval "$(fzf --zsh)"
+
+
+export HOMEBREW_NO_AUTO_UPDATE=1
