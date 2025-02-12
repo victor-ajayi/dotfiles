@@ -21,12 +21,17 @@
 	# List aliases.
 	aliases = config --get-regexp alias
 
+	amend = commit --ammend --no-edit
+
 	# View abbreviated SHA, description, and history graph
 	l = log --pretty=oneline --graph --abbrev-commit
 
 	# View the current working tree status using the short format
 	s = status -s
 	undo = reset --soft HEAD^
+
+	# gh
+	repo = "!gh repo view --web"
 [push]
 	# Automatically set origin as the remote for current branch
 	autoSetupRemote = true
