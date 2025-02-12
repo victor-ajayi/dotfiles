@@ -1,9 +1,6 @@
 export DOTFILES="$HOME/.dotfiles"
 
-source $DOTFILES/zsh/setopt.zsh
-source $DOTFILES/zsh/exports.zsh
-source $DOTFILES/zsh/aliases.zsh
-source $DOTFILES/zsh/functions.zsh
+source $DOTFILES/zsh/config.zsh
 
 # ------------- ZSH -------------
 export ZSH="$HOME/.oh-my-zsh"
@@ -17,7 +14,10 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-# -------------------------------
+
+# zsh-autocomplete
+source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+zstyle ':completion:*:warnings' format ''
 
 # ---------- Prompt -----------
 # eval "$(starship init zsh)"
