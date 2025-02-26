@@ -21,7 +21,7 @@
 	# List aliases.
 	aliases = config --get-regexp alias
 
-	amend = commit --ammend --no-edit
+	amend = commit --amend --no-edit
 
 	# View abbreviated SHA, description, and history graph
 	l = log --pretty=oneline --graph --abbrev-commit

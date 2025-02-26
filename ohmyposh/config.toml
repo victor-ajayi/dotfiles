@@ -2,7 +2,7 @@
 
 version = 2
 final_space = true
-console_title_template = '{{ .Shell }} in {{ .Folder }}'
+console_title_template = '{{ .Path }}'
 
 [[blocks]]
   type = 'prompt'
@@ -10,14 +10,24 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
+  type = 'text'
+  style = 'plain'
+  foreground_templates = [
+    "{{if gt .Code 0}}red{{end}}",
+    "{{if eq .Code 0}}magenta{{end}}",
+  ]
+  background = 'transparent'
+  template = '❯ '
+
+  [[blocks.segments]]
     type = 'path'
     style = 'plain'
-    foreground = '#9CDAFB'
+    foreground = '#09a2f3'
     background = 'transparent'
     template = '<b>{{ .Path }}</b>'
 
     [blocks.segments.properties]
-      style = 'agnoster_short'
+      style = 'folder'
       max_depth = 4
 
   [[blocks.segments]]
@@ -25,12 +35,11 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     foreground = 'blue'
     background = 'transparent'
-    template = ' <b>{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</b>'
+    template = ' <b>{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}</b>'
 
     [blocks.segments.properties]
       branch_icon = ' '
       commit_icon = '@'
-      fetch_status = true
 
 [[blocks]]
   type = 'rprompt'
@@ -39,35 +48,20 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'executiontime'
     style = 'plain'
-    foreground = '#B9DBF8'
+    foreground = '#131313'
     background = 'transparent'
     template = '{{ .FormattedMs }} '
 
     [blocks.segments.properties]
-      threshold = 1000
+      threshold = 2000
       style = 'round'
 
   [[blocks.segments]]
     type = "python"
     style = "plain"
-    foreground = "#94E69C"
+    foreground = "#6aa570"
     background = "transparent"
-    template = " {{ .Full }} {{ if .Venv }}{{ .Venv }}{{ end }} "
-
-[[blocks]]
-  type = 'prompt'
-  alignment = 'left'
-  newline = true
-
-  [[blocks.segments]]
-    type = 'text'
-    style = 'plain'
-    foreground_templates = [
-      "{{if gt .Code 0}}red{{end}}",
-      "{{if eq .Code 0}}#CAE697{{end}}",
-    ]
-    background = 'transparent'
-    template = '❯'
+    template = " {{ .Full }}"
 
 [transient_prompt]
   foreground_templates = [
@@ -85,3 +79,4 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
 [palette]
   gray = "#FF00FF"
+  green = "#00FF00"

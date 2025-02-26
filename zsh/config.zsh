@@ -1,7 +1,6 @@
 setopt HIST_IGNORE_DUPS
 setopt APPEND_HISTORY 
 setopt HIST_IGNORE_SPACE
-setopt HIST_IGNORE_DUPS
 setopt HIST_FIND_NO_DUPS
 
 
@@ -28,10 +27,11 @@ alias activate="source .venv/bin/activate"
 alias pip="pip3"
 alias mkdir="mkdir -pv"
 alias cls="clear"
+alias lg="lazygit"
+alias ld="lazydocker"
 alias findd="find . -maxdepth 1 | fzf"
 alias dotfiles="code ~/.dotfiles"
-
-
+alias uvexp="uv export --format requirements-txt --no-hashes --output-file requirements.txt --quiet"
 
 
 # Check for updates every 21 days
