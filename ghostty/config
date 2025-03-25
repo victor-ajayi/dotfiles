@@ -26,7 +26,7 @@ selection-foreground = eeeeee
 shell-integration = zsh
 shell-integration-features = no-cursor
 
-theme = SaphiraDark
+theme = UltraDark
 
 unfocused-split-opacity = 1.0
 
