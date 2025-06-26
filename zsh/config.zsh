@@ -46,10 +46,6 @@ op() {
   cd "$(find ~/Developer -type d -maxdepth 1 | fzf -e --reverse)"
 }
 
-opc() {
-  op && code .
-}
-
 mkpack() {
   mkdir "$1" && touch "$1"/__init__.py
 }

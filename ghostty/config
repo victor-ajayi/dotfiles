@@ -3,11 +3,9 @@ adjust-underline-thickness = -60%
 
 clipboard-paste-protection = false
 confirm-close-surface = false
-
 cursor-style = block_hollow
 cursor-style-blink = false
 cursor-click-to-move = true
-
 
 font-family = "Geist Mono"
 font-size = 13
