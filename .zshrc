@@ -21,6 +21,8 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 # ---------- Prompt -----------
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh.toml)"
+# eval "$(starship init zsh)"
+
 
 # # zsh-autocomplete
 # source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
